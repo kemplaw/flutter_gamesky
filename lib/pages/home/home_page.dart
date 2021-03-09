@@ -24,10 +24,9 @@ class HomePage extends StatelessWidget {
         bottom: HomeTabBar(),
         toolbarHeight: 100,
       ),
-      body: Container(
-        child: Column(
-          children: [],
-        ),
+      body: CustomScrollView(
+        scrollDirection: Axis.vertical,
+        slivers: [],
       ),
     );
   }

@@ -22,6 +22,8 @@ class _HomeTabBarState extends State<HomeTabBar> with TickerProviderStateMixin {
     Text('娱乐'),
   ];
 
+  _handleTapMenu() {}
+
   @override
   void initState() {
     super.initState();
@@ -41,10 +43,18 @@ class _HomeTabBarState extends State<HomeTabBar> with TickerProviderStateMixin {
               isScrollable: true,
               indicator: BoxDecoration(),
               unselectedLabelColor: defaultLabelColor,
+              unselectedLabelStyle: TextStyle(fontWeight: FontWeight.normal),
               labelColor: defaultSelectedLabelColor,
+              labelStyle: TextStyle(fontWeight: FontWeight.w600),
             ),
           ),
-          Text('icon')
+          InkWell(
+            child: Padding(
+              padding: EdgeInsets.symmetric(horizontal: 10),
+              child: Icon(Icons.menu_rounded),
+            ),
+            onTap: _handleTapMenu,
+          )
         ],
       ),
     );
