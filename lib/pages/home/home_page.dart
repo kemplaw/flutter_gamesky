@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_gamesky/pages/home/widgets/index.dart';
-import 'package:flutter_gamesky/utils/index.dart';
 import 'package:flutter_gamesky/widgets/index.dart';
+import 'package:flutter_gamesky/utils/index.dart';
 
 class HomePage extends StatelessWidget {
   Widget _icon() {
@@ -17,6 +17,7 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       appBar: AppBar(
         backgroundColor: Colors.white,
         title: SearchInput(),
@@ -26,7 +27,10 @@ class HomePage extends StatelessWidget {
       ),
       body: CustomScrollView(
         scrollDirection: Axis.vertical,
-        slivers: [],
+        slivers: [
+          HomeCarousel(),
+          HomeArticleList(),
+        ],
       ),
     );
   }
